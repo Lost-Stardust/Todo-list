@@ -22,3 +22,7 @@ button {
   background-color: transparent;
   border: none;
 }
+.part1 {
+  display: flex;
+  gap: 15px;
+}
