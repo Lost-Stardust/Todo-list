@@ -22,7 +22,15 @@ button {
   background-color: transparent;
   border: none;
 }
-.part1 {
+.part1,
+.part2 {
   display: flex;
   gap: 15px;
+}
+.profile {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background: url("https://avatars.githubusercontent.com/u/98334884?v=4");
+  background-size: contain;
 }
