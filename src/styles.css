@@ -68,7 +68,7 @@ header > h1 {
   padding-top: 40px;
 }
 .projects {
-  flex: 4;
+  flex: 6;
 }
 .sidebar > div > button {
   font-size: 14px;
