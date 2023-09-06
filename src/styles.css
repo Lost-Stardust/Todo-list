@@ -46,7 +46,7 @@ header > h1 {
 }
 
 .sidebar {
-  outline: solid black 2px;
   width: 250px;
   flex: 1;
+  background-color: rgb(236, 236, 236);
 }
