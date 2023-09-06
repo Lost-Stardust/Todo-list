@@ -80,4 +80,5 @@ header > h1 {
 }
 .sidebar > div > button:hover {
   background-color: rgba(128, 128, 128, 0.212);
+  cursor: pointer;
 }
