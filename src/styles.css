@@ -49,4 +49,16 @@ header > h1 {
   width: 250px;
   flex: 1;
   background-color: rgb(236, 236, 236);
+
+  display: flex;
+  flex-direction: column;
+}
+.sidebar > div {
+  outline: solid black 1px;
+}
+.due {
+  flex: 1;
+}
+.projects {
+  flex: 4;
 }
