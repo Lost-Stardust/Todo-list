@@ -48,7 +48,7 @@ header > h1 {
 .sidebar {
   width: 250px;
   flex: 1;
-  background-color: rgb(236, 236, 236);
+  background-color: rgba(128, 128, 128, 0.103);
 
   display: flex;
   flex-direction: column;
