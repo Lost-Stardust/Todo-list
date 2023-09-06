@@ -72,10 +72,12 @@ header > h1 {
 }
 .sidebar > div > button {
   font-size: 14px;
-  background-color: rgba(128, 128, 128, 0.212);
   width: 220px;
   border-radius: 4px;
   padding: 7px;
 
   display: flex;
+}
+.sidebar > div > button:hover {
+  background-color: rgba(128, 128, 128, 0.212);
 }
