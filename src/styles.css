@@ -1,6 +1,12 @@
+html {
+  height: 100%;
+}
 body {
   height: 100%;
   margin: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 * {
   box-sizing: border-box;
@@ -37,4 +43,10 @@ button {
 header > h1 {
   color: white;
   margin: 0;
+}
+
+.sidebar {
+  outline: solid black 2px;
+  width: 250px;
+  flex: 1;
 }
