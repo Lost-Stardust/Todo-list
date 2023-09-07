@@ -100,4 +100,11 @@ header > h1 {
   margin-bottom: 17px;
   padding: 7px;
   padding-left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black solid 1px;
+}
+.add-project {
+  width: 17px;
 }
