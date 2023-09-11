@@ -108,3 +108,6 @@ header > h1 {
 .add-project {
   width: 17px;
 }
+.add-project:hover {
+  cursor: pointer;
+}
