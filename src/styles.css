@@ -59,6 +59,12 @@ header > h1 {
 .sidebar.inactive {
   transform: translateX(-300px);
 }
+.sidebar-btn {
+  transition: 0.6s;
+}
+.sidebar-btn.inactive {
+  transform: rotate(90deg);
+}
 .sidebar > div {
   padding-left: 16px;
   padding-right: 16px;
