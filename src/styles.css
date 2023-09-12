@@ -121,7 +121,10 @@ header > h1 {
 .add-project:hover {
   cursor: pointer;
 }
-
+label {
+  display: flex;
+  flex-direction: column;
+}
 .popup {
   position: fixed;
   top: 30%;
@@ -136,8 +139,7 @@ header > h1 {
   background: white;
 
   display: flex;
-
-  align-items: center;
+  flex-direction: column;
 }
 .overlay {
   position: fixed;
