@@ -152,3 +152,19 @@ label {
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: all;
 }
+form {
+  display: flex;
+  flex-direction: column;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+.buttons > button {
+  border: solid 1px black;
+  width: 55px;
+  padding: 5px;
+  border-radius: 5px;
+}
