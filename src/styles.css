@@ -121,3 +121,32 @@ header > h1 {
 .add-project:hover {
   cursor: pointer;
 }
+
+.popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 300ms ease-in-out 550ms;
+  border-radius: 7px;
+  height: 180px;
+  z-index: 10;
+  min-width: 35%;
+  padding: 0 15px 0 15px;
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+}
+.overlay {
+  position: fixed;
+  opacity: 1;
+  transition: 200ms ease-in-out 550ms;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: all;
+}
