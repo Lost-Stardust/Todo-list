@@ -22,6 +22,10 @@ const projectPopup = () => {
   const overlay = document.createElement("div");
   overlay.className = "overlay";
 
+  const title = document.createElement("h3");
+  title.textContent = "Add project";
+  popup.insertBefore(title, form);
+
   add.addEventListener("click", () => {
     body.appendChild(popup);
     body.appendChild(overlay);
