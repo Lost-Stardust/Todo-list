@@ -26,6 +26,20 @@ const projectPopup = () => {
   title.textContent = "Add project";
   popup.insertBefore(title, form);
 
+  const buttons = document.createElement("div");
+  buttons.className = "buttons";
+  form.appendChild(buttons);
+
+  const cancel = document.createElement("button");
+  cancel.textContent = "Cancel";
+  cancel.className = "cancel";
+  buttons.appendChild(cancel);
+
+  const confirm = document.createElement("button");
+  confirm.textContent = "Add";
+  confirm.className = "add";
+  buttons.appendChild(confirm);
+
   add.addEventListener("click", () => {
     body.appendChild(popup);
     body.appendChild(overlay);
