@@ -1,3 +1,4 @@
+import { addProject } from "./add-project";
 const projectPopup = () => {
   const add = document.querySelector(".add-project");
   const body = document.querySelector("body");
@@ -39,15 +40,22 @@ const projectPopup = () => {
   confirm.textContent = "Add";
   confirm.className = "add";
   buttons.appendChild(confirm);
+  body.appendChild(popup);
+  body.appendChild(overlay);
 
   add.addEventListener("click", () => {
-    body.appendChild(popup);
-    body.appendChild(overlay);
+    popup.classList.add("active");
+    overlay.classList.add("active");
   });
 
   cancel.addEventListener("click", () => {
-    body.removeChild(popup);
-    body.removeChild(overlay);
+    event.preventDefault();
+    popup.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+  addProject();
+  confirm.addEventListener("click", () => {
+    addProject();
   });
 };
 export { projectPopup };
