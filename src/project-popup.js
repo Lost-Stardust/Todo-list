@@ -55,6 +55,7 @@ const projectPopup = () => {
   });
   addProject();
   confirm.addEventListener("click", () => {
+    event.preventDefault();
     addProject();
   });
 };
