@@ -155,12 +155,13 @@ label {
 form {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 .buttons {
   display: flex;
   gap: 10px;
   justify-content: flex-end;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 .buttons > button {
   width: 65px;
