@@ -125,6 +125,16 @@ label {
   display: flex;
   flex-direction: column;
 }
+input {
+  border-radius: 4px;
+  border: solid rgba(128, 128, 128, 0.555) 1px;
+  padding: 4px;
+  transition: 0.3s;
+}
+input:focus {
+  outline: none;
+  border: solid black 1px;
+}
 .popup {
   position: fixed;
   top: 25%;
