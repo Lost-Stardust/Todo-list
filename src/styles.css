@@ -175,3 +175,6 @@ form {
 .buttons > .cancel {
   background-color: rgba(128, 128, 128, 0.116);
 }
+button:hover {
+  cursor: pointer;
+}
