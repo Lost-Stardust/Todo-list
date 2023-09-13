@@ -44,5 +44,10 @@ const projectPopup = () => {
     body.appendChild(popup);
     body.appendChild(overlay);
   });
+
+  cancel.addEventListener("click", () => {
+    body.removeChild(popup);
+    body.removeChild(overlay);
+  });
 };
 export { projectPopup };
