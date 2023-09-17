@@ -62,6 +62,8 @@ const projectPopup = () => {
   confirm.addEventListener("click", () => {
     event.preventDefault();
     addProject();
+    popup.classList.remove("active");
+    overlay.classList.remove("active");
   });
 };
 export { projectPopup };
