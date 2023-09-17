@@ -200,6 +200,7 @@ button:hover {
 .projects-container {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 .project {
   padding: 7px;
@@ -207,4 +208,7 @@ button:hover {
   font-size: 14px;
   width: 100%;
   display: flex;
+}
+.project:hover {
+  background-color: rgba(128, 128, 128, 0.116);
 }
