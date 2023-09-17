@@ -53,7 +53,12 @@ const projectPopup = () => {
     popup.classList.remove("active");
     overlay.classList.remove("active");
   });
-  addProject();
+
+  confirm.addEventListener("click", () => {
+    const projectContainer = document.querySelector(".projects-container");
+    projectContainer.textContent = "";
+  });
+
   confirm.addEventListener("click", () => {
     event.preventDefault();
     addProject();
