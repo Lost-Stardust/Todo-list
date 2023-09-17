@@ -197,3 +197,7 @@ form {
 button:hover {
   cursor: pointer;
 }
+.projects-container {
+  display: flex;
+  flex-direction: column;
+}
