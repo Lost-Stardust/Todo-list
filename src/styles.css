@@ -201,3 +201,10 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+.project {
+  padding: 7px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+}
