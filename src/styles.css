@@ -171,7 +171,7 @@ input:focus {
   opacity: 1;
   pointer-events: all;
 }
-form {
+.popup form {
   display: flex;
   flex-direction: column;
   gap: 5px;
