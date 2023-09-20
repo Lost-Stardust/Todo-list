@@ -212,3 +212,24 @@ button:hover {
 .project:hover {
   background-color: rgba(128, 128, 128, 0.116);
 }
+.todo-popup {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  border-radius: 7px;
+  height: 180px;
+  z-index: 10;
+  min-width: 25%;
+  padding: 0 15px 0 15px;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+}
+.todo-popup.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
