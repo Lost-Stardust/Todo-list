@@ -233,3 +233,10 @@ button:hover {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
+.todo-popup form {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+}
