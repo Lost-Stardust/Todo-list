@@ -222,8 +222,8 @@ button:hover {
   border-radius: 7px;
   height: 180px;
   z-index: 10;
-  min-width: 25%;
-  padding: 0 15px 0 15px;
+  min-width: 30%;
+  padding: 5px 15px 5px 15px;
   background: white;
 
   display: flex;
