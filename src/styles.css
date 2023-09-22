@@ -275,3 +275,6 @@ button:hover {
   height: 30px;
   background-color: rgba(128, 128, 128, 0.116);
 }
+.leftBtns .date {
+  width: 70px;
+}
