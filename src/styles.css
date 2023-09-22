@@ -249,3 +249,16 @@ button:hover {
 .todo-popup #desc {
   border: none;
 }
+.todo-popup .buttons {
+  justify-content: space-between;
+}
+.leftBtns,
+.rightBtns {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+}
+.leftBtns {
+  justify-content: start;
+}
