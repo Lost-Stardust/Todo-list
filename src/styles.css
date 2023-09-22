@@ -254,11 +254,24 @@ button:hover {
 }
 .leftBtns,
 .rightBtns {
-  flex: 1;
   display: flex;
-  gap: 30px;
+  gap: 5px;
   justify-content: flex-end;
 }
 .leftBtns {
   justify-content: start;
+}
+.buttons div button {
+  width: 65px;
+  padding: 7px;
+  border-radius: 4px;
+}
+.rightBtns .add {
+  background-color: #7b2cbf;
+  color: white;
+}
+.rightBtns button,
+.leftBtns button {
+  height: 30px;
+  background-color: rgba(128, 128, 128, 0.116);
 }
