@@ -216,8 +216,8 @@ button:hover {
   position: fixed;
   top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
   transition: opacity 300ms ease-in-out;
   border-radius: 7px;
   height: 180px;
@@ -228,6 +228,8 @@ button:hover {
 
   display: flex;
   flex-direction: column;
+
+  border: solid black 1px;
 }
 .todo-popup.active {
   transform: translate(-50%, -50%) scale(1);
@@ -239,4 +241,11 @@ button:hover {
 
   height: 100%;
   width: 100%;
+}
+.todo-popup #name {
+  font-size: 20px;
+  border: none;
+}
+.todo-popup #desc {
+  border: none;
 }
