@@ -28,6 +28,16 @@ const todoPopup = () => {
   buttons.className = "buttons";
   form.appendChild(buttons);
 
+  const date = document.createElement("button");
+  date.textContent = "Due date";
+  date.className = "date";
+  buttons.appendChild(date);
+
+  const priority = document.createElement("button");
+  priority.textContent = "Priority";
+  priority.className = "priority";
+  buttons.appendChild(priority);
+
   const cancel = document.createElement("button");
   cancel.textContent = "Cancel";
   cancel.className = "cancel";
