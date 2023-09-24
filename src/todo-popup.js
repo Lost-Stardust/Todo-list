@@ -28,25 +28,33 @@ const todoPopup = () => {
   buttons.className = "buttons";
   form.appendChild(buttons);
 
+  const leftBtns = document.createElement("div");
+  leftBtns.className = "leftBtns";
+  buttons.appendChild(leftBtns);
+
+  const rightBtns = document.createElement("div");
+  rightBtns.className = "rightBtns";
+  buttons.appendChild(rightBtns);
+
   const date = document.createElement("button");
   date.textContent = "Due date";
   date.className = "date";
-  buttons.appendChild(date);
+  leftBtns.appendChild(date);
 
   const priority = document.createElement("button");
   priority.textContent = "Priority";
   priority.className = "priority";
-  buttons.appendChild(priority);
+  leftBtns.appendChild(priority);
 
   const cancel = document.createElement("button");
   cancel.textContent = "Cancel";
   cancel.className = "cancel";
-  buttons.appendChild(cancel);
+  rightBtns.appendChild(cancel);
 
   const confirm = document.createElement("button");
   confirm.textContent = "Add";
   confirm.className = "add";
-  buttons.appendChild(confirm);
+  rightBtns.appendChild(confirm);
 
   add.addEventListener("click", () => {
     popup.classList.add("active");
