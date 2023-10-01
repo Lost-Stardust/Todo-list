@@ -36,9 +36,10 @@ const todoPopup = () => {
   rightBtns.className = "rightBtns";
   buttons.appendChild(rightBtns);
 
-  const date = document.createElement("button");
-  date.textContent = "Due date";
-  date.className = "date";
+  const date = document.createElement("input");
+  date.setAttribute("type", "date");
+  date.setAttribute("id", "date");
+  date.setAttribute("name", "date");
   leftBtns.appendChild(date);
 
   const priority = document.createElement("button");
