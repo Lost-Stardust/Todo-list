@@ -57,6 +57,15 @@ const todoPopup = () => {
   confirm.className = "add";
   rightBtns.appendChild(confirm);
 
+  const dropdowns = document.createElement("div");
+  dropdowns.className = "dropdowns";
+  buttons.insertAdjacentElement("afterend", dropdowns);
+
+  const projectSelect = document.createElement("select");
+  dropdowns.appendChild(projectSelect);
+  projectSelect.setAttribute("name", "projectSelect");
+  projectSelect.id = "projectSelect";
+
   add.addEventListener("click", () => {
     popup.classList.add("active");
     overlay.classList.add("active");
@@ -72,6 +81,10 @@ const todoPopup = () => {
     event.preventDefault();
     popup.classList.remove("active");
     overlay.classList.remove("active");
+  });
+
+  priority.addEventListener("click", () => {
+    event.preventDefault();
   });
 
   body.appendChild(popup);
