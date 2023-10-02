@@ -1,5 +1,12 @@
 import { makeProject } from "./project-ui";
+// import { projectList } from ".";
+
 const projectList = [];
+const defaultProject = {
+  name: "Default",
+};
+projectList.push(defaultProject);
+makeProject();
 const addProject = () => {
   const projectName = document.querySelector("#name").value;
   const project = {};
