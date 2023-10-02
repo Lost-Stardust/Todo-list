@@ -216,8 +216,8 @@ button:hover {
   position: fixed;
   top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
   transition: opacity 300ms ease-in-out;
   border-radius: 7px;
   height: 180px;
@@ -282,4 +282,8 @@ button:hover {
   background-color: rgba(128, 128, 128, 0.116);
   border: none;
   width: 108px;
+}
+.dropdowns {
+  display: flex;
+  padding: 10px 0 10px 0;
 }
