@@ -1,3 +1,4 @@
+import { projectList } from "./add-project";
 const todoPopup = () => {
   const add = document.querySelector(".add-todo");
   const body = document.querySelector("body");
@@ -69,18 +70,25 @@ const todoPopup = () => {
   add.addEventListener("click", () => {
     popup.classList.add("active");
     overlay.classList.add("active");
+    for (let i = 0; i < projectList.length; i++) {
+      const option = document.createElement("option");
+      option.textContent = projectList[i].name;
+      projectSelect.appendChild(option);
+    }
   });
 
   cancel.addEventListener("click", () => {
     event.preventDefault();
     popup.classList.remove("active");
     overlay.classList.remove("active");
+    projectSelect.replaceChildren();
   });
 
   confirm.addEventListener("click", () => {
     event.preventDefault();
     popup.classList.remove("active");
     overlay.classList.remove("active");
+    projectSelect.replaceChildren();
   });
 
   priority.addEventListener("click", () => {
