@@ -43,9 +43,18 @@ const todoPopup = () => {
   date.setAttribute("name", "date");
   leftBtns.appendChild(date);
 
-  const priority = document.createElement("button");
+  const priority = document.createElement("select");
   priority.textContent = "Priority";
+  const high = document.createElement("option");
+  const medium = document.createElement("option");
+  const low = document.createElement("option");
+  high.textContent = "high";
+  medium.textContent = "medium";
+  low.textContent = "low";
   priority.className = "priority";
+  priority.appendChild(high);
+  priority.appendChild(medium);
+  priority.appendChild(low);
   leftBtns.appendChild(priority);
 
   const cancel = document.createElement("button");
