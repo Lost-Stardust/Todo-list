@@ -287,3 +287,16 @@ button:hover {
   display: flex;
   padding: 10px 0 10px 0;
 }
+.priority,
+#projectSelect {
+  border: #7b2cbf 1px solid;
+  border-radius: 4px;
+  background: none;
+}
+.priority:focus,
+#projectSelect:focus {
+  outline: none;
+}
+#projectSelect {
+  padding: 4px;
+}
