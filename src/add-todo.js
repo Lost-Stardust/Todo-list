@@ -9,11 +9,12 @@ const addTodo = () => {
     }
   }
 
-  const title = document.querySelector("#name");
-  const desc = document.querySelector("#desc");
-  const priority = document.querySelector(".priority");
-  const date = document.querySelector("#date");
+  const title = document.querySelector("#todo-title").value;
+  const desc = document.querySelector("#desc").value;
+  const priority = document.querySelector(".priority").value;
+  const date = document.querySelector("#date").value;
 
   const todo1 = new Todo(title, desc, priority, date, false);
   console.log(todo1);
 };
+export { addTodo };
