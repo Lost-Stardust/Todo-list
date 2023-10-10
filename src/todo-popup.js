@@ -1,4 +1,5 @@
 import { projectList } from "./add-project";
+import { addTodo } from "./add-todo";
 const todoPopup = () => {
   const add = document.querySelector(".add-todo");
   const body = document.querySelector("body");
@@ -11,8 +12,8 @@ const todoPopup = () => {
 
   const todoName = document.createElement("input");
   todoName.setAttribute("type", "text");
-  todoName.setAttribute("id", "name");
-  todoName.setAttribute("name", "name");
+  todoName.setAttribute("id", "todo-title");
+  todoName.setAttribute("name", "todo-title");
   todoName.setAttribute("placeholder", "Task name");
   form.appendChild(todoName);
 
@@ -98,6 +99,8 @@ const todoPopup = () => {
     popup.classList.remove("active");
     overlay.classList.remove("active");
     projectSelect.replaceChildren();
+
+    addTodo();
   });
 
   priority.addEventListener("click", () => {
