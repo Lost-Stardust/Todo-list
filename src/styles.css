@@ -242,7 +242,7 @@ button:hover {
   height: 100%;
   width: 100%;
 }
-.todo-popup #name {
+.todo-popup #todo-title {
   font-size: 20px;
   border: none;
 }
