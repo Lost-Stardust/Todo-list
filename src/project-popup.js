@@ -10,14 +10,14 @@ const projectPopup = () => {
   popup.appendChild(form);
 
   const label = document.createElement("label");
-  label.setAttribute("for", "name");
+  label.setAttribute("for", "project-title");
   label.textContent = "Name";
   form.appendChild(label);
 
   const projectName = document.createElement("input");
   projectName.setAttribute("type", "text");
-  projectName.setAttribute("id", "name");
-  projectName.setAttribute("name", "name");
+  projectName.setAttribute("id", "project-title");
+  projectName.setAttribute("name", "project-title");
   form.appendChild(projectName);
 
   const overlay = document.createElement("div");
