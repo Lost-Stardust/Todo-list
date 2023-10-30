@@ -8,7 +8,7 @@ const defaultProject = {
 projectList.push(defaultProject);
 makeProject();
 const addProject = () => {
-  const projectName = document.querySelector("#name").value;
+  const projectName = document.querySelector("#project-title").value;
   const project = {};
   project.name = projectName;
 
