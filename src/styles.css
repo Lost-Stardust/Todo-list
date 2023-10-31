@@ -327,3 +327,6 @@ button:hover {
 .other-info {
   flex: 1;
 }
+.title-wrapper > p {
+  margin: 0;
+}
