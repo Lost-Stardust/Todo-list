@@ -307,4 +307,12 @@ button:hover {
 .content {
   flex: 5;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.todo {
+  outline: solid orange 1px;
+  width: 70%;
+  height: 60px;
 }
