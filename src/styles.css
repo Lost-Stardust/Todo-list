@@ -330,3 +330,6 @@ button:hover {
 .title-wrapper > p {
   margin: 0;
 }
+.desc {
+  font-size: 12px;
+}
