@@ -16,5 +16,19 @@ const makeTodo = () => {
   checkbox.type = "checkbox";
   checkbox.className = "checkbox";
   titleBox.appendChild(checkbox);
+
+  const titleWrapper = document.createElement("div");
+  titleWrapper.className = "title-wrapper";
+  titleBox.appendChild(titleWrapper);
+
+  const title = document.createElement("p");
+  title.className = "p";
+  title.textContent = "dummy text";
+  titleWrapper.appendChild(title);
+
+  const desc = document.createElement("p");
+  desc.className = "desc";
+  desc.textContent = "dummy description with no purpose";
+  titleWrapper.appendChild(desc);
 };
 export { makeTodo };
