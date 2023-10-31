@@ -313,7 +313,7 @@ button:hover {
 }
 .todo {
   outline: solid orange 1px;
-  width: 70%;
+  width: 60%;
   height: 60px;
   display: flex;
   flex-direction: row-reverse;
