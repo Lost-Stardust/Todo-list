@@ -35,5 +35,10 @@ const makeTodo = () => {
   date.className = "todo-date";
   date.textContent = "date here";
   otherInfo.appendChild(date);
+
+  const priority = document.createElement("p");
+  priority.className = "todo-priority";
+  priority.textContent = "priority";
+  otherInfo.appendChild(priority);
 };
 export { makeTodo };
