@@ -40,5 +40,10 @@ const makeTodo = () => {
   priority.className = "todo-priority";
   priority.textContent = "priority";
   otherInfo.appendChild(priority);
+
+  const edit = document.createElement("img");
+  edit.className = "edit";
+  edit.src = "../visual-assets/editing.png";
+  otherInfo.appendChild(edit);
 };
 export { makeTodo };
