@@ -30,5 +30,10 @@ const makeTodo = () => {
   desc.className = "desc";
   desc.textContent = "dummy description with no purpose";
   titleWrapper.appendChild(desc);
+
+  const date = document.createElement("p");
+  date.className = "todo-date";
+  date.textContent = "date here";
+  otherInfo.appendChild(date);
 };
 export { makeTodo };
