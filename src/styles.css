@@ -326,6 +326,8 @@ button:hover {
 }
 .other-info {
   flex: 1;
+  display: flex;
+  gap: 10px;
 }
 .title-wrapper > p {
   margin: 0;
