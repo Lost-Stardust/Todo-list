@@ -21,6 +21,8 @@ const addTodo = () => {
   const todo1 = new Todo(title, desc, priority, date, false);
   console.log(todo1);
 
+  console.log(todoList.push(todo1));
+
   const todo = document.createElement("div");
   todo.className = "todo";
   const content = document.querySelector(".content");
@@ -67,7 +69,5 @@ const addTodo = () => {
   edit.className = "edit";
   edit.src = "../visual-assets/editing.png";
   otherInfo.appendChild(edit);
-
-  checkbox.addEventListener("click", () => {});
 };
 export { addTodo };
