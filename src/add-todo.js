@@ -9,6 +9,10 @@ const addTodo = () => {
     }
   }
 
+  const todoList = [
+    // Todos made will be stored in here
+  ];
+
   const title = document.querySelector("#todo-title").value;
   const desc = document.querySelector("#desc").value;
   const priority = document.querySelector(".priority").value;
@@ -63,5 +67,7 @@ const addTodo = () => {
   edit.className = "edit";
   edit.src = "../visual-assets/editing.png";
   otherInfo.appendChild(edit);
+
+  checkbox.addEventListener("click", () => {});
 };
 export { addTodo };
