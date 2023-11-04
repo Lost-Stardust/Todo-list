@@ -312,7 +312,7 @@ button:hover {
   padding: 20px;
 }
 .todo {
-  outline: solid orange 1px;
+  border-bottom: solid rgba(189, 189, 189, 0.555) 1px;
   width: 60%;
   height: 60px;
   display: flex;
