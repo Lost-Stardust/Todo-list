@@ -80,6 +80,7 @@ const todoPopup = () => {
   add.addEventListener("click", () => {
     popup.classList.add("active");
     overlay.classList.add("active");
+    projectSelect.replaceChildren();
     for (let i = 0; i < projectList.length; i++) {
       const option = document.createElement("option");
       option.textContent = projectList[i].name;
@@ -98,7 +99,6 @@ const todoPopup = () => {
     event.preventDefault();
     popup.classList.remove("active");
     overlay.classList.remove("active");
-    projectSelect.replaceChildren();
 
     addTodo();
   });
