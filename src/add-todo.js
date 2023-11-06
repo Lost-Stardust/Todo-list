@@ -29,6 +29,7 @@ const addTodo = () => {
   todo.className = "todo";
   const content = document.querySelector(".content");
   content.appendChild(todo);
+  todo.dataset.index = todoList.length - 1;
 
   const otherInfo = document.createElement("div");
   todo.appendChild(otherInfo);
