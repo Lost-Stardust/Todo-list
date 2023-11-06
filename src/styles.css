@@ -341,6 +341,9 @@ button:hover {
   width: 22px;
   height: 22px;
 }
+.edit:hover {
+  cursor: pointer;
+}
 .todo-date,
 .todo-priority {
   font-size: 15px;
