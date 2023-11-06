@@ -1,3 +1,7 @@
+const todoList = [
+  // Todos made will be stored in here
+];
+
 const addTodo = () => {
   class Todo {
     constructor(title, desc, priority, date, status) {
@@ -9,10 +13,6 @@ const addTodo = () => {
     }
   }
 
-  const todoList = [
-    // Todos made will be stored in here
-  ];
-
   const title = document.querySelector("#todo-title").value;
   const desc = document.querySelector("#desc").value;
   const priority = document.querySelector(".priority").value;
@@ -21,7 +21,8 @@ const addTodo = () => {
   const todo1 = new Todo(title, desc, priority, date, false);
   console.log(todo1);
 
-  console.log(todoList.push(todo1));
+  todoList.push(todo1);
+  console.log(todoList);
 
   const todo = document.createElement("div");
   todo.className = "todo";
