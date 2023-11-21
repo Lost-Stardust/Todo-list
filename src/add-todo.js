@@ -1,6 +1,8 @@
+import { editPopup } from "./edit-popup";
 const todoList = [
   // Todos made will be stored in here
 ];
+let index;
 
 const addTodo = () => {
   class Todo {
@@ -72,5 +74,15 @@ const addTodo = () => {
   edit.className = "edit";
   edit.src = "../visual-assets/editing.png";
   otherInfo.appendChild(edit);
+
+  edit.addEventListener("click", (e) => {
+    let indexValue = e.target.parentNode.parentNode.dataset.index;
+    index = indexValue;
+    console.log(index);
+    console.log("edit listener triggered");
+    editPopup();
+  });
 };
 export { addTodo };
+export { todoList };
+export { index };
