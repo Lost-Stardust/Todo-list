@@ -1,8 +1,6 @@
 import { todoList } from "./add-todo";
+import { index } from "./add-todo";
 const editTodo = () => {
-  const edit = document.querySelector(".edit");
-  edit.addEventListener("click", (e) => {
-    console.log(e.target.parentNode.parentNode.dataset.index);
-  });
+  console.log(todoList[index]);
 };
 export { editTodo };
