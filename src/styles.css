@@ -212,7 +212,8 @@ button:hover {
 .project:hover {
   background-color: rgba(128, 128, 128, 0.116);
 }
-.todo-popup {
+.todo-popup,
+.edit-popup {
   position: fixed;
   top: 25%;
   left: 50%;
@@ -231,25 +232,30 @@ button:hover {
 
   border: solid black 1px;
 }
-.todo-popup.active {
+.todo-popup.active,
+.edit-popup.active {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
-.todo-popup form {
+.todo-popup form,
+.edit-popup form {
   display: flex;
   flex-direction: column;
 
   height: 100%;
   width: 100%;
 }
-.todo-popup #todo-title {
+.todo-popup #todo-title,
+.edit-popup #edit-title {
   font-size: 20px;
   border: none;
 }
-.todo-popup #desc {
+.todo-popup #desc,
+.edit-popup #edit-desc {
   border: none;
 }
-.todo-popup .buttons {
+.todo-popup .buttons,
+.edit-popup .buttons {
   justify-content: space-between;
 }
 .leftBtns,
@@ -275,29 +281,40 @@ button:hover {
   height: 30px;
   background-color: rgba(128, 128, 128, 0.116);
 }
+.rightBtns .edit-confirm {
+  background-color: #7b2cbf;
+  color: white;
+}
 .leftBtns .date {
   width: 70px;
 }
-#date {
+#date,
+#edit-date {
   background-color: rgba(128, 128, 128, 0.116);
   border: none;
   width: 108px;
 }
-.dropdowns {
+.dropdowns,
+.edit-dropdowns {
   display: flex;
   padding: 10px 0 10px 0;
 }
 .priority,
-#projectSelect {
+#projectSelect,
+.edit-priority,
+#edit-projectSelect {
   border: #7b2cbf 1px solid;
   border-radius: 4px;
   background: none;
 }
 .priority:focus,
-#projectSelect:focus {
+#projectSelect:focus,
+.edit-priority:focus,
+#edit-projectSelect:focus {
   outline: none;
 }
-#projectSelect {
+#projectSelect,
+#edit-projectSelect {
   padding: 4px;
 }
 .content-wrapper {
