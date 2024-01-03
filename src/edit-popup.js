@@ -2,7 +2,7 @@ import { projectList } from "./add-project";
 import { editTodo } from "./edit-todo";
 
 const editPopup = () => {
-  const edit = document.querySelector(".edit");
+  // const edit = document.querySelector(".edit");
   const body = document.querySelector("body");
   const popup = document.createElement("div");
   popup.className = "edit-popup";
@@ -94,6 +94,7 @@ const editPopup = () => {
     popup.classList.remove("active");
     overlay.classList.remove("active");
     projectSelect.replaceChildren();
+    body.removeChild(popup);
   });
 
   confirm.addEventListener("click", () => {
@@ -102,6 +103,7 @@ const editPopup = () => {
     overlay.classList.remove("active");
 
     editTodo();
+    body.removeChild(popup);
   });
 
   editPriority.addEventListener("click", () => {
