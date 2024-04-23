@@ -61,6 +61,7 @@ header > h1 {
 }
 .sidebar-btn {
   transition: 0.6s;
+  fill: white;
 }
 .sidebar-btn.inactive {
   transform: rotate(90deg);
