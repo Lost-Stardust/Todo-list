@@ -7,6 +7,17 @@ const editTodo = () => {
   const date = document.querySelector("#edit-date").value;
   const priority = document.querySelector(".edit-priority").value;
   const project = document.querySelector("#edit-projectSelect").value;
-  console.log({ title, desc, date, priority, project });
+  // console.log({ title, desc, date, priority, project });
+
+  const selectedTodo = todoList[index];
+  selectedTodo.title = title;
+  selectedTodo.desc = desc;
+  selectedTodo.date = date;
+  selectedTodo.priority = priority;
+  selectedTodo.project = project;
+  console.log(selectedTodo);
+
+  const editTodo = document.querySelector(`.todo[data-index="${index}"]`);
+  console.log(editTodo);
 };
 export { editTodo };
