@@ -17,7 +17,13 @@ const editTodo = () => {
   selectedTodo.project = project;
   console.log(selectedTodo);
 
-  const editTodo = document.querySelector(`.todo[data-index="${index}"]`);
-  console.log(editTodo);
+  const todo = document.querySelector(`.todo[data-index="${index}"]`);
+  console.log(todo);
+
+  const editTitle = todo.querySelector(".todo-title");
+  const editDesc = todo.querySelector(".desc");
+  const editDate = todo.querySelector(".todo-date");
+  const editPriority = todo.querySelector(".todo-priority");
+  console.log(editTitle, editDesc, editDate, editPriority);
 };
 export { editTodo };
