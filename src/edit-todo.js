@@ -25,5 +25,10 @@ const editTodo = () => {
   const editDate = todo.querySelector(".todo-date");
   const editPriority = todo.querySelector(".todo-priority");
   console.log(editTitle, editDesc, editDate, editPriority);
+
+  editTitle.textContent = title;
+  editDesc.textContent = desc;
+  editDate.textContent = date;
+  editPriority.textContent = priority;
 };
 export { editTodo };
