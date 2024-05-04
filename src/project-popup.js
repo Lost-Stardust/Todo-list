@@ -56,7 +56,9 @@ const projectPopup = () => {
 
   confirm.addEventListener("click", () => {
     const projectContainer = document.querySelector(".projects-container");
+    const content = document.querySelector(".content");
     projectContainer.textContent = "";
+    content.textContent = "";
   });
 
   confirm.addEventListener("click", () => {
