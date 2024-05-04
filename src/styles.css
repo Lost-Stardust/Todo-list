@@ -370,10 +370,9 @@ button:hover {
   font-size: 15px;
 }
 .content > div {
-  transform: scale(0);
+  display: none;
 }
 .Default.active {
-  transform: scale(1);
   width: 100%;
   flex: 5;
   display: flex;
@@ -382,11 +381,11 @@ button:hover {
   padding: 20px;
 }
 .content > div.active {
-  transform: scale(1);
   width: 100%;
   flex: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
   padding: 20px;
 }
