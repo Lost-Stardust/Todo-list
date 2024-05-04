@@ -10,6 +10,34 @@ const makeProject = () => {
 
     project.textContent = projectList[i].name;
     console.log(project);
+
+    // Create div for each project to display its respective todos in
+    const pDisplay = document.createElement("div");
+    // remove whitespace from textcontent to use as class name
+    pDisplay.className = projectList[i].name.replace(/\s/g, "");
+    pDisplay.dataset.index = projectList.indexOf(projectList[i]);
+
+    const content = document.querySelector(".content");
+    content.appendChild(pDisplay);
+    console.log(pDisplay);
+
+    const defaultProject = document.querySelector(".Default");
+    defaultProject.classList.add("active");
+    console.log(defaultProject);
+
+    project.addEventListener("click", (e) => {
+      // remove whitespace from textContent to use as selector
+      const name = project.textContent.replace(/\s/g, "");
+      const pDisplay = document.querySelector(`.${name}`);
+
+      // Select all poject display divs and remove active class for all
+      const otherDisplays = content.querySelectorAll("div");
+      otherDisplays.forEach((d) => {
+        d.classList.remove("active");
+      });
+      // assign active class to clicked project's div
+      pDisplay.classList.add("active");
+    });
   }
 
   console.log(projectList);
