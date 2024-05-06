@@ -1,12 +1,12 @@
 import { makeProject } from "./project-ui";
 // import { projectList } from ".";
 
-const projectList = [];
+let projectList = [];
 const defaultProject = {
   name: "Default",
 };
-projectList.push(defaultProject);
-makeProject();
+// projectList.push(defaultProject);
+// makeProject();
 const addProject = () => {
   const projectName = document.querySelector("#project-title").value;
   const project = {};
@@ -14,6 +14,7 @@ const addProject = () => {
 
   projectList.push(project);
   makeProject();
+  projectList = [];
 };
 export { addProject };
 export { projectList };
