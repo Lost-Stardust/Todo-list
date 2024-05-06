@@ -21,9 +21,9 @@ const makeProject = () => {
     content.appendChild(pDisplay);
     console.log(pDisplay);
 
-    const defaultProject = document.querySelector(".Default");
-    defaultProject.classList.add("active");
-    console.log(defaultProject);
+    // const defaultProject = document.querySelector(".Default");
+    // defaultProject.classList.add("active");
+    // console.log(defaultProject);
 
     project.addEventListener("click", (e) => {
       // remove whitespace from textContent to use as selector
@@ -42,4 +42,27 @@ const makeProject = () => {
 
   console.log(projectList);
 };
+
+// Create button for default project
+let project = document.createElement("button");
+project.className = "project";
+// project.dataset.index = projectList.indexOf(projectList[i]);
+const projectContainer = document.querySelector(".projects-container");
+projectContainer.appendChild(project);
+
+project.textContent = "Default";
+console.log(project);
+
+// Create display div for default project
+const pDisplay = document.createElement("div");
+pDisplay.className = "Default";
+// pDisplay.dataset.index = projectList.indexOf(projectList[i]);
+
+const content = document.querySelector(".content");
+content.appendChild(pDisplay);
+
+const defaultProject = document.querySelector(".Default");
+defaultProject.classList.add("active");
+console.log(defaultProject);
+
 export { makeProject };
