@@ -65,4 +65,14 @@ const defaultProject = document.querySelector(".Default");
 defaultProject.classList.add("active");
 console.log(defaultProject);
 
+project.addEventListener("click", (e) => {
+  // Select all poject display divs and remove active class for all
+  const otherDisplays = content.querySelectorAll("div");
+  otherDisplays.forEach((d) => {
+    d.classList.remove("active");
+  });
+  // assign active class to clicked project's div
+  pDisplay.classList.add("active");
+});
+
 export { makeProject };
