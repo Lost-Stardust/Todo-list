@@ -78,6 +78,11 @@ const addTodo = () => {
   edit.src = "../visual-assets/editing.png";
   otherInfo.appendChild(edit);
 
+  const trash = document.createElement("img");
+  trash.className = "trash";
+  trash.src = "../visual-assets/trash-bin.png";
+  otherInfo.appendChild(trash);
+
   edit.addEventListener("click", (e) => {
     let indexValue = e.target.parentNode.parentNode.dataset.index;
     index = indexValue;
