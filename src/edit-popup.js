@@ -1,4 +1,3 @@
-import { projectList } from "./add-project";
 import { editTodo } from "./edit-todo";
 
 const editPopup = () => {
@@ -83,9 +82,11 @@ const editPopup = () => {
   popup.classList.add("active");
   overlay.classList.add("active");
   projectSelect.replaceChildren();
-  for (let i = 0; i < projectList.length; i++) {
+  const projectContainer = document.querySelector(".projects-container");
+  const projectArr = projectContainer.querySelectorAll("button");
+  for (let i = 0; i < projectArr.length; i++) {
     const option = document.createElement("option");
-    option.textContent = projectList[i].name;
+    option.textContent = projectArr[i].textContent;
     projectSelect.appendChild(option);
   }
 
