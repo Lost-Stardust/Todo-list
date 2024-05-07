@@ -359,10 +359,17 @@ button:hover {
   font-size: 12px;
 }
 .edit {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 .edit:hover {
+  cursor: pointer;
+}
+.trash {
+  width: 18px;
+  height: 18px;
+}
+.trash:hover {
   cursor: pointer;
 }
 .todo-date,
