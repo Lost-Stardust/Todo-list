@@ -83,6 +83,15 @@ const addTodo = () => {
   trash.src = "../visual-assets/trash-bin.png";
   otherInfo.appendChild(trash);
 
+  trash.addEventListener("click", (e) => {
+    e.target.parentNode.parentNode.parentNode.removeChild(
+      e.target.parentNode.parentNode
+    );
+    let index = e.target.parentNode.parentNode.dataset.index;
+    todoList.splice(index, 1);
+    console.log(todoList);
+  });
+
   edit.addEventListener("click", (e) => {
     let indexValue = e.target.parentNode.parentNode.dataset.index;
     index = indexValue;
