@@ -20,6 +20,12 @@ const editTodo = () => {
   const todo = document.querySelector(`.todo[data-index="${index}"]`);
   console.log(todo);
 
+  const projectDisplay = document.querySelector(
+    `.${project}`.replace(/\s/g, "")
+  );
+  console.log(projectDisplay);
+  projectDisplay.appendChild(todo);
+
   const editTitle = todo.querySelector(".todo-title");
   const editDesc = todo.querySelector(".desc");
   const editDate = todo.querySelector(".todo-date");
