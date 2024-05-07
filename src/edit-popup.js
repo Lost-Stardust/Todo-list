@@ -1,4 +1,6 @@
 import { editTodo } from "./edit-todo";
+import { todoList } from "./add-todo";
+import { index } from "./add-todo";
 
 const editPopup = () => {
   // const edit = document.querySelector(".edit");
@@ -10,11 +12,15 @@ const editPopup = () => {
   form.setAttribute("method", "post");
   popup.appendChild(form);
 
+  // Create variable to access the properties of the todo object being edited
+  const selectedTodo = todoList[index];
+
   const editName = document.createElement("input");
   editName.setAttribute("type", "text");
   editName.setAttribute("id", "edit-title");
   editName.setAttribute("name", "edit-title");
   editName.setAttribute("placeholder", "Task name");
+  editName.setAttribute("value", `${selectedTodo.title}`);
   form.appendChild(editName);
 
   const editDesc = document.createElement("input");
@@ -22,6 +28,7 @@ const editPopup = () => {
   editDesc.setAttribute("id", "edit-desc");
   editDesc.setAttribute("name", "edit-desc");
   editDesc.setAttribute("placeholder", "Description");
+  editDesc.setAttribute("value", `${selectedTodo.desc}`);
   form.appendChild(editDesc);
 
   const overlay = document.querySelector(".overlay");
@@ -42,6 +49,7 @@ const editPopup = () => {
   editDate.setAttribute("type", "date");
   editDate.setAttribute("id", "edit-date");
   editDate.setAttribute("name", "edit-date");
+  editDate.setAttribute("value", `${selectedTodo.date}`);
   leftBtns.appendChild(editDate);
 
   const editPriority = document.createElement("select");
@@ -75,6 +83,7 @@ const editPopup = () => {
   const projectSelect = document.createElement("select");
   dropdowns.appendChild(projectSelect);
   projectSelect.setAttribute("name", "projectSelect");
+  projectSelect.setAttribute("value", `${selectedTodo.project}`);
   projectSelect.id = "edit-projectSelect";
 
   // Activate popup
