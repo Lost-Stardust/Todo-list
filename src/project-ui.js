@@ -48,6 +48,13 @@ const makeProject = () => {
     btn.appendChild(remove);
   });
 
+  remove.addEventListener("click", (e) => {
+    let name = e.target.parentNode.textContent.replace(/\s/g, "");
+    let display = document.querySelector(`.${name}`);
+    display.remove();
+    e.target.parentNode.remove();
+  });
+
   console.log(projectList);
 };
 
