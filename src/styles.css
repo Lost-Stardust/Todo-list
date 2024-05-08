@@ -88,6 +88,7 @@ header > h1 {
 
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 .sidebar > div > button:hover {
   background-color: rgba(128, 128, 128, 0.116);
@@ -212,6 +213,7 @@ button:hover {
   font-size: 14px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 .project:hover {
   background-color: rgba(128, 128, 128, 0.116);
@@ -395,4 +397,9 @@ button:hover {
   align-items: center;
   justify-content: start;
   padding: 20px;
+}
+.remove {
+  height: 14px;
+  width: 14px;
+  background: center / contain url("../visual-assets/trash-bin.png");
 }
