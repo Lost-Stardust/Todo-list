@@ -53,6 +53,7 @@ const makeProject = () => {
     let display = document.querySelector(`.${name}`);
     display.remove();
     e.target.parentNode.remove();
+    e.stopPropagation();
   });
 
   console.log(projectList);
