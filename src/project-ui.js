@@ -39,6 +39,14 @@ const makeProject = () => {
       pDisplay.classList.add("active");
     });
   }
+  const projectBtns = document.querySelectorAll(".project");
+  console.log([projectBtns]);
+  const remove = document.createElement("button");
+  remove.className = "remove";
+
+  projectBtns.forEach((btn) => {
+    btn.appendChild(remove);
+  });
 
   console.log(projectList);
 };
