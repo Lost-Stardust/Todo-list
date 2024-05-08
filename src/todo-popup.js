@@ -81,7 +81,7 @@ const todoPopup = () => {
     overlay.classList.add("active");
     projectSelect.replaceChildren();
     const projectContainer = document.querySelector(".projects-container");
-    const projectArr = projectContainer.querySelectorAll("button");
+    const projectArr = projectContainer.querySelectorAll(".project");
     for (let i = 0; i < projectArr.length; i++) {
       const option = document.createElement("option");
       option.textContent = projectArr[i].textContent;
