@@ -1,4 +1,5 @@
 import { addTodo } from "./add-todo";
+import { makeTodo } from "./todo-ui";
 const todoPopup = () => {
   const add = document.querySelector(".add-todo");
   const body = document.querySelector("body");
@@ -101,6 +102,7 @@ const todoPopup = () => {
     popup.classList.remove("active");
     overlay.classList.remove("active");
 
+    makeTodo();
     addTodo();
   });
 
