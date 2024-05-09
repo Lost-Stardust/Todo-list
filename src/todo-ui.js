@@ -1,10 +1,17 @@
+let todoInfo = {};
 const makeTodo = () => {
-  const title = document.querySelector("#todo-title").value;
-  const desc = document.querySelector("#desc").value;
-  const priority = document.querySelector(".priority").value;
-  const date = document.querySelector("#date").value;
-  const project = document.querySelector("#projectSelect").value;
-  console.log({ title, desc, priority, date, project });
+  todoInfo.title = document.querySelector("#todo-title").value;
+  todoInfo.desc = document.querySelector("#desc").value;
+  todoInfo.priority = document.querySelector(".priority").value;
+  todoInfo.date = document.querySelector("#date").value;
+  todoInfo.project = document.querySelector("#projectSelect").value;
+  console.log(
+    todoInfo.title,
+    todoInfo.desc,
+    todoInfo.priority,
+    todoInfo.date,
+    todoInfo.project
+  );
 };
-
+export { todoInfo };
 export { makeTodo };
