@@ -1,5 +1,5 @@
 import { todoList } from "./add-todo";
-import { index } from "./add-todo";
+import { index } from "./todo-ui";
 const editTodo = () => {
   console.log(todoList[index]);
   const title = document.querySelector("#edit-title").value;
