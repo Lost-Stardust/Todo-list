@@ -1,3 +1,4 @@
+import { makeTodo } from "./todo-ui";
 const todoList = [
   // Todos made will be stored in here
 ];
@@ -24,6 +25,8 @@ const addTodo = () => {
 
   todoList.push(todo1);
   console.log(todoList);
+
+  makeTodo(todo1);
 };
 export { addTodo };
 export { todoList };
