@@ -14,17 +14,18 @@ const editTodo = () => {
   selectedTodo.desc = desc;
   selectedTodo.date = date;
   selectedTodo.priority = priority;
-  selectedTodo.project = project;
   console.log(selectedTodo);
 
   const todo = document.querySelector(`.todo[data-index="${index}"]`);
   console.log(todo);
 
-  const projectDisplay = document.querySelector(
-    `.${project}`.replace(/\s/g, "")
-  );
-  console.log(projectDisplay);
-  projectDisplay.appendChild(todo);
+  if (selectedTodo.project !== project) {
+    selectedTodo.project = project;
+    const projectDisplay = document.querySelector(
+      `.${project}`.replace(/\s/g, "")
+    );
+    projectDisplay.appendChild(todo);
+  }
 
   const editTitle = todo.querySelector(".todo-title");
   const editDesc = todo.querySelector(".desc");
