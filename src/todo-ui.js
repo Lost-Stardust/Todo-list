@@ -1,8 +1,7 @@
 import { todoList } from "./add-todo";
 import { editPopup } from "./edit-popup";
-let todoInfo = {};
 let index;
-const makeTodo = () => {
+const makeTodo = (todoInfo) => {
   todoInfo.title = document.querySelector("#todo-title").value;
   todoInfo.desc = document.querySelector("#desc").value;
   todoInfo.priority = document.querySelector(".priority").value;
@@ -17,7 +16,7 @@ const makeTodo = () => {
   );
   console.log(projectDisplay);
   projectDisplay.appendChild(todo);
-  todo.dataset.index = todoList.length;
+  todo.dataset.index = todoList.indexOf(todoInfo);
 
   const otherInfo = document.createElement("div");
   todo.appendChild(otherInfo);
@@ -73,6 +72,15 @@ const makeTodo = () => {
     let index = e.target.parentNode.parentNode.dataset.index;
     todoList.splice(index, 1);
     console.log(todoList);
+
+    // Update data-index of todos
+    let todos = document.querySelectorAll(".todo");
+    console.log(todos);
+    let n = 0;
+    todos.forEach((todo) => {
+      todo.dataset.index = n;
+      n++;
+    });
   });
 
   edit.addEventListener("click", (e) => {
