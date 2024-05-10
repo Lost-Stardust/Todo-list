@@ -102,7 +102,7 @@ const todoPopup = () => {
     popup.classList.remove("active");
     overlay.classList.remove("active");
 
-    makeTodo();
+    // makeTodo();
     addTodo();
   });
 
