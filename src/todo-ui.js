@@ -83,6 +83,5 @@ const makeTodo = () => {
     editPopup();
   });
 };
-export { todoInfo };
 export { makeTodo };
 export { index };
