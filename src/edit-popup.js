@@ -1,6 +1,6 @@
 import { editTodo } from "./edit-todo";
 import { todoList } from "./add-todo";
-import { index } from "./add-todo";
+import { index } from "./todo-ui";
 
 const editPopup = () => {
   // const edit = document.querySelector(".edit");
@@ -92,7 +92,7 @@ const editPopup = () => {
   overlay.classList.add("active");
   projectSelect.replaceChildren();
   const projectContainer = document.querySelector(".projects-container");
-  const projectArr = projectContainer.querySelectorAll("button");
+  const projectArr = projectContainer.querySelectorAll(".project");
   for (let i = 0; i < projectArr.length; i++) {
     const option = document.createElement("option");
     option.textContent = projectArr[i].textContent;
