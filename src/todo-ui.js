@@ -2,11 +2,6 @@ import { todoList } from "./add-todo";
 import { editPopup } from "./edit-popup";
 let index;
 const makeTodo = (todoInfo) => {
-  todoInfo.title = document.querySelector("#todo-title").value;
-  todoInfo.desc = document.querySelector("#desc").value;
-  todoInfo.priority = document.querySelector(".priority").value;
-  todoInfo.date = document.querySelector("#date").value;
-  todoInfo.project = document.querySelector("#projectSelect").value;
   console.log({ todoInfo });
 
   const todo = document.createElement("div");
