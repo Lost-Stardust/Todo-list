@@ -2,6 +2,8 @@ import { makeTodo } from "./todo-ui";
 const todoList = [
   // Todos made will be stored in here
 ];
+// variable that will represent the stored todoList in local storage
+let storedList;
 
 const addTodo = () => {
   class Todo {
@@ -27,6 +29,21 @@ const addTodo = () => {
   console.log(todoList);
 
   makeTodo(todo1);
+
+  // Retrieve the todoList in local storage
+  // Update it with the new todo that is created
+  storedList = JSON.parse(localStorage.getItem("todoList"));
+  storedList.push(todo1);
+  localStorage.setItem("todoList", JSON.stringify(storedList));
+  console.log(storedList.length);
 };
+
+// add todoList array to localStorage if it doesnt have it already
+
+if (!localStorage.getItem("todoList")) {
+  localStorage.setItem("todoList", JSON.stringify(todoList));
+}
+
 export { addTodo };
 export { todoList };
+export { storedList };
