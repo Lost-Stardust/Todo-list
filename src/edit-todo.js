@@ -37,5 +37,13 @@ const editTodo = () => {
   editDesc.textContent = desc;
   editDate.textContent = date;
   editPriority.textContent = priority;
+
+  const storedList = JSON.parse(localStorage.getItem("todoList"));
+  storedList[index].title = title;
+  storedList[index].desc = desc;
+  storedList[index].date = date;
+  storedList[index].priority = priority;
+  storedList[index].project = project;
+  localStorage.setItem("todoList", JSON.stringify(storedList));
 };
 export { editTodo };
