@@ -54,13 +54,6 @@ const projectPopup = () => {
     overlay.classList.remove("active");
   });
 
-  // confirm.addEventListener("click", () => {
-  //   const projectContainer = document.querySelector(".projects-container");
-  //   const content = document.querySelector(".content");
-  //   // projectContainer.textContent = "";
-  //   // content.textContent = "";
-  // });
-
   confirm.addEventListener("click", () => {
     event.preventDefault();
     addProject();
