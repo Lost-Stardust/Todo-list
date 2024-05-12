@@ -1,4 +1,4 @@
-import { todoList } from "./add-todo";
+import { storedList, todoList } from "./add-todo";
 import { editPopup } from "./edit-popup";
 let index;
 const makeTodo = (todoInfo) => {
@@ -76,6 +76,10 @@ const makeTodo = (todoInfo) => {
       todo.dataset.index = n;
       n++;
     });
+
+    const list = JSON.parse(localStorage.getItem("todoList"));
+    list.splice(index, 1);
+    localStorage.setItem("todoList", JSON.stringify(list));
   });
 
   edit.addEventListener("click", (e) => {
