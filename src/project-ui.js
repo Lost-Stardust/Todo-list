@@ -1,9 +1,11 @@
-import { projectList } from "./add-project";
-const makeProject = () => {
+import { projList } from "./add-project";
+const makeProject = (projectList) => {
   for (let i = 0; i < projectList.length; i++) {
     let project = document.createElement("button");
     project.className = "project";
-    project.dataset.index = projectList.indexOf(projectList[i]);
+    projList.forEach((proj) => {
+      project.dataset.index = projList.indexOf(proj);
+    });
 
     const projectContainer = document.querySelector(".projects-container");
     projectContainer.appendChild(project);
@@ -54,6 +56,23 @@ const makeProject = () => {
     display.remove();
     e.target.parentNode.remove();
     e.stopPropagation();
+
+    let index = e.target.parentNode.dataset.index;
+    console.log(index);
+    projList.splice(index, 1);
+    console.log(projList);
+
+    // correct data index of project buttons
+    let defaultp = projectContainer.querySelector(".project");
+    defaultp.classList.add("defaultProject");
+    console.log(defaultp);
+    let projs = document.querySelectorAll(".project:not(.defaultProject)");
+    console.log(projs);
+    let n = 0;
+    projs.forEach((btn) => {
+      btn.dataset.index = n;
+      n++;
+    });
   });
 
   console.log(projectList);
