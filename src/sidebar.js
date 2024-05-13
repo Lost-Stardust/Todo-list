@@ -1,6 +1,7 @@
 const sidebarSlide = () => {
   const sidebarBtn = document.querySelector(".sidebar-btn");
   const sidebar = document.querySelector(".sidebar");
+  const content = document.querySelector(".content");
   sidebarBtn.addEventListener("click", () => {
     if (
       sidebar.classList.contains("inactive") &&
@@ -8,9 +9,11 @@ const sidebarSlide = () => {
     ) {
       sidebar.classList.remove("inactive");
       sidebarBtn.classList.remove("inactive");
+      content.style.marginLeft = "250px";
     } else {
       sidebar.classList.add("inactive");
       sidebarBtn.classList.add("inactive");
+      content.style.marginLeft = "0px";
     }
   });
 };
