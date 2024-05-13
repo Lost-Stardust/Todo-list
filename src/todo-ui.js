@@ -89,6 +89,27 @@ const makeTodo = (todoInfo) => {
     console.log("edit listener triggered");
     editPopup();
   });
+  checkbox.addEventListener("click", () => {
+    if (checkbox.checked == true) {
+      todoTitle.style.textDecoration = "line-through";
+      todoDesc.style.textDecoration = "line-through";
+
+      todoTitle.style.color = "grey";
+      todoDesc.style.color = "grey";
+
+      todoTitle.style.textDecorationThickness = "3px";
+      todoDesc.style.textDecorationThickness = "3px";
+
+      todoTitle.style.textDecorationColor = "#7b2cbf";
+      todoDesc.style.textDecorationColor = "#7b2cbf";
+    } else {
+      todoTitle.style.textDecoration = "none";
+      todoDesc.style.textDecoration = "none";
+
+      todoTitle.style.color = "black";
+      todoDesc.style.color = "black";
+    }
+  });
 };
 export { makeTodo };
 export { index };
