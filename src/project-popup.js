@@ -18,6 +18,7 @@ const projectPopup = () => {
   projectName.setAttribute("type", "text");
   projectName.setAttribute("id", "project-title");
   projectName.setAttribute("name", "project-title");
+  projectName.setAttribute("maxlength", "30");
   form.appendChild(projectName);
 
   const overlay = document.createElement("div");
@@ -56,9 +57,13 @@ const projectPopup = () => {
 
   confirm.addEventListener("click", () => {
     event.preventDefault();
-    addProject();
-    popup.classList.remove("active");
-    overlay.classList.remove("active");
+    if (projectName.value == "") {
+      alert("Please enter a name for your project");
+    } else {
+      popup.classList.remove("active");
+      overlay.classList.remove("active");
+      addProject();
+    }
   });
 
   projectName.addEventListener("keydown", (e) => {
