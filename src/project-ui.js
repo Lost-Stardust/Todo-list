@@ -55,6 +55,11 @@ const makeProject = (project) => {
     projectList.splice(index, 1);
     console.log(projectList);
 
+    // delete project from local storage
+    const list = JSON.parse(localStorage.getItem("projList"));
+    list.splice(index, 1);
+    localStorage.setItem("projList", JSON.stringify(list));
+
     // correct data index of project buttons
     let defaultp = projectContainer.querySelector(".project");
     defaultp.classList.add("defaultProject");
