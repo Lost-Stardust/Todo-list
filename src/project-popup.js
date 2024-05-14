@@ -60,5 +60,9 @@ const projectPopup = () => {
     popup.classList.remove("active");
     overlay.classList.remove("active");
   });
+
+  projectName.addEventListener("keydown", (e) => {
+    if (!/^[A-Za-z]*$/.test(e.key)) e.preventDefault();
+  });
 };
 export { projectPopup };
