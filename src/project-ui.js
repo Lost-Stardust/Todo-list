@@ -1,4 +1,5 @@
 import { projectList } from "./add-project";
+import { todoList } from "./add-todo";
 const makeProject = (project) => {
   let projectbtn = document.createElement("button");
   projectbtn.className = "project";
@@ -46,6 +47,21 @@ const makeProject = (project) => {
   remove.addEventListener("click", (e) => {
     let name = e.target.parentNode.textContent.replace(/\s/g, "");
     let display = document.querySelector(`.${name}`);
+    let children = display.childNodes;
+    let childrenArr = Array.from(children);
+    console.log(childrenArr);
+
+    for (let i = 0; i < childrenArr.length; i++) {
+      console.log(childrenArr[i]);
+      let index = childrenArr[i].dataset.index;
+      todoList[index].project = "Default";
+      console.log(todoList[index]);
+      localStorage.setItem("todoList", JSON.stringify(todoList));
+      let defaultp = document.querySelector(".Default");
+      defaultp.appendChild(childrenArr[i]);
+      console.log(childrenArr);
+    }
+
     display.remove();
     e.target.parentNode.remove();
     e.stopPropagation();
