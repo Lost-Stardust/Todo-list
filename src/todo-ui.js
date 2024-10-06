@@ -1,5 +1,7 @@
 import { storedList, todoList } from "./add-todo";
 import { editPopup } from "./edit-popup";
+import editIcon from "../visual-assets/editing.png";
+import trashIcon from "../visual-assets/trash-icon.png";
 let index;
 const makeTodo = (todoInfo) => {
   console.log({ todoInfo });
@@ -52,12 +54,12 @@ const makeTodo = (todoInfo) => {
 
   const edit = document.createElement("img");
   edit.className = "edit";
-  edit.src = "../visual-assets/editing.png";
+  edit.src = editIcon;
   otherInfo.appendChild(edit);
 
   const trash = document.createElement("img");
   trash.className = "trash";
-  trash.src = "../visual-assets/trash-bin.png";
+  trash.src = trashIcon;
   otherInfo.appendChild(trash);
 
   trash.addEventListener("click", (e) => {
