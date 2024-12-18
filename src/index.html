@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+  </head>
+  <body>
+    <header>
+      <div class="part1">
+        <button class="sidebar-btn">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="Outline"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <rect y="11" width="24" height="2" rx="1" />
+            <rect y="4" width="24" height="2" rx="1" />
+            <rect y="18" width="24" height="2" rx="1" />
+          </svg>
+        </button>
+      </div>
+      <h1>Todo List</h1>
+      <div class="part2">
+        <button class="add-todo">
+          <svg
+            id="Layer_1"
+            height="23"
+            viewBox="0 0 24 24"
+            width="23"
+            xmlns="http://www.w3.org/2000/svg"
+            data-name="Layer 1"
+            fill="white"
+          >
+            <path
+              d="m12 0a12 12 0 1 0 12 12 12.013 12.013 0 0 0 -12-12zm0 22a10 10 0 1 1 10-10 10.011 10.011 0 0 1 -10 10zm5-10a1 1 0 0 1 -1 1h-3v3a1 1 0 0 1 -2 0v-3h-3a1 1 0 0 1 0-2h3v-3a1 1 0 0 1 2 0v3h3a1 1 0 0 1 1 1z"
+            />
+          </svg>
+        </button>
+        <div class="profile"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <div class="sidebar">
+        <div>
+          <button class="add-project">
+            Add Project
+            <!-- <img src="add.png" /> -->
+          </button>
+        </div>
+        <div class="projects-container">
+          <!-- This div will be populated dynamically with projects -->
+        </div>
+        <!-- Place for static sidebar elements, if any -->
+      </div>
+
+      <div class="content">
+        <!-- Main content area where todos will be displayed dynamically -->
+      </div>
+    </div>
+
+    <!-- No static popup elements in the HTML; they are generated dynamically by JavaScript -->
+  </body>
+</html>
