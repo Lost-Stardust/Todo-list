@@ -1,7 +1,7 @@
 import { storedList, todoList } from "./add-todo";
 import { editPopup } from "./edit-popup";
-import editIcon from "../visual-assets/editing.png";
-import trashIcon from "../visual-assets/trash-bin.png";
+import editIcon from "./visual-assets/editing.png";
+import trashIcon from "./visual-assets/trash-bin.png";
 let index;
 const makeTodo = (todoInfo) => {
   console.log({ todoInfo });

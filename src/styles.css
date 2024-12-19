@@ -411,7 +411,7 @@ button:hover {
 .remove {
   height: 14px;
   width: 14px;
-  background: center / contain url("../visual-assets/trash-bin.png");
+  background: center / contain url("./visual-assets/trash-bin.png");
 }
 .checkbox {
   accent-color: #7b2cbf;
